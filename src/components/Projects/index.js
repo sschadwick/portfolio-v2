@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Projects = () => (
-  <div>
+  <div className="section">
     <p>Test</p>
   </div>
 )

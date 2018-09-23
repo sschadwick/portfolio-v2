@@ -7,6 +7,12 @@ import Landing from '../components/Landing'
 import Projects from '../components/Projects'
 import Section from '../components/Section'
 import Tools from '../components/Tools'
+
+import AboutContent from '../content/About'
+import ContactContent from '../content/Contact'
+import ProjectsContent from '../content/Projects'
+import ToolsContent from '../content/Tools'
+
 import './index.scss'
 
 const Layout = () => (
@@ -20,14 +26,14 @@ const Layout = () => (
     />
     <Header />
     <Landing />
-    <Section header={'About'} content={'Lorem ipsum etc.'} />
-    <Section header={'Projects'} content={'Lorem ipsum etc.'}>
+    <Section header="About" content={<AboutContent />} />
+    <Section header="Projects" content={<ProjectsContent />}>
       <Projects />
     </Section>
-    <Section header={'Tools'} content={'Lorem ipsum etc.'}>
+    <Section header="Tools" content={<ToolsContent />}>
       <Tools />
     </Section>
-    <Section header={'Contact'} content={'Lorem ipsum etc.'}>
+    <Section header="Contact" content={<ContactContent />}>
       <Contact />
     </Section>
   </div>

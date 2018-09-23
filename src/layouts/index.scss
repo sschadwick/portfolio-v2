@@ -15,4 +15,10 @@ body {
   color: $black;
   font-family: $font-primary;
   font-size: 18px;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+}
+
+p {
+  margin: 10px 0;
 }

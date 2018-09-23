@@ -22,6 +22,7 @@
 }
 
 .section__right {
+  @include c-align;
   @include v-align;
   border: 1px solid blue;
   grid-area: right;
