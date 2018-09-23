@@ -1,0 +1,29 @@
+@import '../variables.scss';
+
+.section {
+  background: $background-main;
+  display: grid;
+  grid-template-areas: 'left right';
+  grid-template-columns: 4fr 6fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.section__left {
+  @include v-align;
+  background: #fff;
+  border: 1px solid red;
+  grid-area: left;
+  padding: 0 4em;
+  h2 {
+    border-bottom: solid 2px red;
+    width: fit-content;
+  }
+}
+
+.section__right {
+  @include v-align;
+  border: 1px solid blue;
+  grid-area: right;
+  padding: 0 4em;
+}

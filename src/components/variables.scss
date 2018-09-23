@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+// vars
+
+$background-main: #fafafa;
+$background-secondary: #dfdfdf;
+$font-primary: 'Lato', sans-serif;
+$font-secondary: georgia;
+$black: #333;
+
+// mixins
+
+@mixin c-align {
+  display: grid;
+  place-content: center;
+}
+
+@mixin v-align {
+  align-content: center;
+  display: grid;
+}

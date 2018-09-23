@@ -1,0 +1,49 @@
+.feather {
+  fill: none;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 24px;
+}
+
+nav {
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+}
+
+ul {
+  display: grid;
+  font-size: 24px;
+  font-variant: small-caps;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  letter-spacing: 0.1em;
+  list-style: none;
+}
+
+.navbar__item {
+  padding-bottom: 0.25em;
+  position: relative;
+}
+
+.navbar__item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 0;
+  bottom: -5px;
+  background: #333;
+  height: 2px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.navbar__item:hover::after {
+  left: 0;
+  right: 100;
+  width: 100%;
+}

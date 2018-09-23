@@ -1,0 +1,16 @@
+@import '../variables.scss';
+
+.landing {
+  @include c-align;
+  height: 100vh;
+  width: 100%;
+  .landing__container {
+    margin-top: -5em;
+    h1 {
+      font-size: 46px;
+    }
+    h3 {
+      font-size: 34px;
+    }
+  }
+}
