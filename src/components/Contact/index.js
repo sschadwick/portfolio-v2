@@ -29,17 +29,13 @@ export default class Contact extends React.Component {
     }).catch(error => alert(error))
   }
 
-  confirm = () => {
-    alert('SENT')
-  }
-
   render() {
     return (
       <div>
         <form
           name="contact"
           method="post"
-          action={this.confirm}
+          action="/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
