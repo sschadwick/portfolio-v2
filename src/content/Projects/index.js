@@ -6,7 +6,7 @@ const ProjectsContent = () => (
       My projects are the result of my learning, their aim is to consolidate.
     </p>
     <p>
-      Currently, I am exploring AWS AppSync and GraphQL, to aid refactoring a
+      Currently I am exploring AWS AppSync and GraphQL, to aid refactoring a
       work project.
     </p>
     <p>
