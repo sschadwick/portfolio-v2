@@ -10,8 +10,8 @@ const ProjectsContent = () => (
       work project.
     </p>
     <p>
-      I spend 60 hours a week working & commuting, so projects now take some
-      time.
+      I spend a lot of time commuting, so projects take a bit of time, I try and
+      spend an hour working on them each day.
     </p>
   </>
 )
