@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Github, Twitter } from 'react-feather'
 import './header.scss'
 
@@ -6,27 +7,47 @@ const Header = () => (
   <nav>
     <ul>
       <li>
-        <a className="navbar__item">msd</a>
+        <Link to="#" className="navbar__item">
+          msd
+        </Link>
       </li>
       <li>
-        <a className="navbar__item">about</a>
+        <Link to="#about" className="navbar__item">
+          about
+        </Link>
       </li>
       <li>
-        <a className="navbar__item">projects</a>
+        <Link to="#projects" className="navbar__item">
+          projects
+        </Link>
       </li>
       <li>
-        <a className="navbar__item">tools</a>
+        <Link to="#about" className="navbar__item">
+          tools
+        </Link>
       </li>
       <li>
-        <a className="navbar__item">contact</a>
+        <Link to="#about" className="navbar__item">
+          contact
+        </Link>
       </li>
       <li>
-        <a className="navbar__item">
+        <a
+          href="https://github.com/msweeneydev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar__item"
+        >
           <Github />
         </a>
       </li>
       <li>
-        <a className="navbar__item">
+        <a
+          href="https://twitter.com/msweeneydev"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar__item"
+        >
           <Twitter />
         </a>
       </li>

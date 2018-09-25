@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const ContactContent = () => (
   <>
     <p>Want to talk about anything web related? Get in touch!</p>
     <p>
       You can also find me in the{' '}
-      <a href="https://byteconf.com" target="_blank">
+      <Link to="https://byteconf.com" target="_blank" rel="noopener noreferrer">
         Byteconf
-      </a>{' '}
+      </Link>{' '}
       Discord server.
     </p>
   </>
