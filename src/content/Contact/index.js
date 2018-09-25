@@ -1,12 +1,12 @@
 import React from 'react'
+import Link from 'gatsby'
 
 const ContactContent = () => (
   <>
-    <p>Front-End Developer based in Glasgow, currently working for Ajenta.</p>
-    <p>Current student with The Open University studying Computer Science.</p>
+    <p>Want to talk about anything web related? Get in touch!</p>
     <p>
-      Admirer of useful abstractions, monochrome colour schemes and strong
-      typing.
+      You can also find me in the <a href="https://byteconf.com">Byteconf</a>{' '}
+      Discord server.
     </p>
   </>
 )
