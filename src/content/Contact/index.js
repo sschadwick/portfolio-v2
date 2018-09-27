@@ -6,9 +6,9 @@ const ContactContent = () => (
     <p>Want to talk about anything web related? Get in touch!</p>
     <p>
       You can also find me in the{' '}
-      <Link to="https://byteconf.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://byteconf.com" target="_blank" rel="noopener noreferrer">
         Byteconf
-      </Link>{' '}
+      </a>{' '}
       Discord server.
     </p>
   </>
