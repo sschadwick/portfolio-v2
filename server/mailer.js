@@ -1,5 +1,5 @@
-var sesAccessKey = 'mail@msweeneydev.com'
-var sesSecretKey = ''
+var sesAccessKey = process.env.secretAddress
+var sesSecretKey = process.env.secretPassword
 
 exports.handler = function(event, context, callback) {
   var nodemailer = require('nodemailer')
