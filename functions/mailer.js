@@ -7590,10 +7590,11 @@ exports.handler = function (event, context, callback) {
   };
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
+      console.log('BIG ERROR!');
       const response = {
         statusCode: 500,
         body: JSON.stringify({
-          error: error.message
+          error: 'REALLY BIG ERROR!'
         })
       };
       callback(null, response);
