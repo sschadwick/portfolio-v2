@@ -1,21 +1,22 @@
 var sesAccessKey = process.env.secretAddress
 var sesSecretKey = process.env.secretPassword
 
-exports.handler = function(event, context, callback) {
-  var nodemailer = require('nodemailer')
-  var smtpTransport = require('nodemailer-smtp-transport')
+var nodemailer = require('nodemailer')
+var smtpTransport = require('nodemailer-smtp-transport')
 
-  var transporter = nodemailer.createTransport(
-    smtpTransport({
-      host: 'smtp.example.com',
-      port: 587,
-      secure: false, // Activate TLS/STARTTLS
-      auth: {
-        user: sesAccessKey,
-        pass: sesSecretKey,
-      },
-    })
-  )
+var transporter = nodemailer.createTransport(
+  smtpTransport({
+    host: 'smtp.example.com',
+    port: 587,
+    secure: false, // Activate TLS/STARTTLS
+    auth: {
+      user: sesAccessKey,
+      pass: sesSecretKey,
+    },
+  })
+)
+
+exports.handler = function(event, context, callback) {
   // const requestBody = JSON.parse(event.body)
   // const emailBody = requestBody.text;
   var text = 'Email body goes here'
