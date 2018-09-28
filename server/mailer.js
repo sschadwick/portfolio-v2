@@ -1,5 +1,5 @@
 var sesAccessKey = 'mail@msweeneydev.com'
-var sesSecretKey = 'Vuerafhm7'
+var sesSecretKey = ''
 
 exports.handler = function(event, context, callback) {
   var nodemailer = require('nodemailer')
