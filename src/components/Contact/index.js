@@ -1,4 +1,9 @@
 import React from 'react'
+import axios from 'axios'
+
+var msg = JSON.stringify({
+  text: 'This is a test message',
+})
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -10,16 +15,20 @@ export default class Contact extends React.Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: {
-        'form-name': 'contact',
-        ...this.state,
-      },
-    }).catch(error => alert(error))
+  // handleSubmit = e => {
+  //   e.preventDefault()
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: {
+  //       'form-name': 'contact',
+  //       ...this.state,
+  //     },
+  //   }).catch(error => alert(error))
+  // }
+
+  handleSubmit = () => {
+    axios.post('/.netlify/functions/email', msg)
   }
 
   render() {
