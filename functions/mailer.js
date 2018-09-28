@@ -7569,7 +7569,7 @@ exports.handler = function (event, context, callback) {
   var smtpTransport = __webpack_require__(52);
 
   var transporter = nodemailer.createTransport(smtpTransport({
-    host: 'smtp.example.com',
+    host: 'smtp.stackmail.com',
     port: 587,
     secure: false,
     // Activate TLS/STARTTLS
@@ -7577,14 +7577,20 @@ exports.handler = function (event, context, callback) {
       user: sesAccessKey,
       pass: sesSecretKey
     }
-  })); // const requestBody = JSON.parse(event.body)
+  }));
+  transporter.verify(function (error, success) {
+    if (error) {
+      console.log('setup error', error);
+    } else {
+      console.log('Server is ready to take our messages');
+    }
+  }); // const requestBody = JSON.parse(event.body)
   // const emailBody = requestBody.text;
 
   var text = 'Email body goes here';
   var mailOptions = {
     from: 'noreply@msweeneydev.com',
     to: 'mail@msweeneydev.com',
-    // bcc: '<bcc email addres>',
     subject: 'Test subject',
     text: text
   };
