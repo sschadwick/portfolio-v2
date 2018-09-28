@@ -16,8 +16,9 @@ exports.handler = function(event, context, callback) {
       },
     })
   )
-  // const requestBody = JSON.parse(event.body)
-  // const emailBody = requestBody.text;
+  const requestBody = JSON.parse(event.body)
+  const emailBody = requestBody.text
+  console.log(emailBody)
   var text = 'Email body goes here'
 
   var mailOptions = {

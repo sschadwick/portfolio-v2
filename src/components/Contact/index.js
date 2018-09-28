@@ -28,7 +28,7 @@ export default class Contact extends React.Component {
   // }
 
   handleSubmit = () => {
-    axios.post('/.netlify/functions/email', msg)
+    axios.post('/.netlify/functions/mailer', msg)
   }
 
   render() {
