@@ -58,7 +58,7 @@ export default class Contact extends React.Component {
             </label>
           </p>
           <p>
-            <button type="submit">Send</button>
+            <button onClick={this.handleSubmit}>Send</button>
           </p>
         </form>
       </div>
