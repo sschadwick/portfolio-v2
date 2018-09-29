@@ -16,7 +16,8 @@
   grid-area: left;
   padding: 0 4em;
   h2 {
-    border-bottom: solid 2px red;
+    border-bottom: solid 2px $black;
+    padding-bottom: 0.25em;
     width: fit-content;
   }
 }
