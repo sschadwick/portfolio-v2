@@ -7560,22 +7560,19 @@ function createDefaultLogger() {
 "use strict";
 
 
-var sesAccessKey = process.env.secretAddress;
-var sesSecretKey = process.env.secretPassword;
-
 exports.handler = function (event, context, callback) {
-  var nodemailer = __webpack_require__(29);
+  const nodemailer = __webpack_require__(29);
 
-  var smtpTransport = __webpack_require__(52);
+  const smtpTransport = __webpack_require__(52);
 
-  var transporter = nodemailer.createTransport(smtpTransport({
+  const transporter = nodemailer.createTransport(smtpTransport({
     host: 'smtp.stackmail.com',
     port: 587,
     secure: false,
     // Activate TLS/STARTTLS
     auth: {
-      user: sesAccessKey,
-      pass: sesSecretKey
+      user: process.env.secretAddress,
+      pass: process.env.secretPassword
     }
   }));
   transporter.verify(function (error, success) {
@@ -7584,23 +7581,21 @@ exports.handler = function (event, context, callback) {
     } else {
       console.log('Server is ready to take our messages');
     }
-  }); // const requestBody = JSON.parse(event.body)
-  // const emailBody = requestBody.text;
-
-  var text = 'Email body goes here';
-  var mailOptions = {
+  });
+  const requestBody = JSON.parse(event.body);
+  const emailBody = requestBody.text;
+  const mailOptions = {
     from: 'noreply@msweeneydev.com',
     to: 'mail@msweeneydev.com',
     subject: 'Test subject',
-    text: text
+    text: emailBody
   };
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log('BIG ERROR!');
       const response = {
         statusCode: 500,
         body: JSON.stringify({
-          error: 'REALLY BIG ERROR!'
+          error: error.message
         })
       };
       callback(null, response);
@@ -7609,7 +7604,7 @@ exports.handler = function (event, context, callback) {
     const response = {
       statusCode: 200,
       body: JSON.stringify({
-        message: `Email processed succesfully!`
+        message: `Email sent succesfully!`
       })
     };
     callback(null, response);
