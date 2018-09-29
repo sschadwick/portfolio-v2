@@ -26,14 +26,14 @@ const Layout = () => (
     />
     <Header />
     <Landing />
-    <Section header="About" content={<AboutContent />} />
-    <Section header="Projects" content={<ProjectsContent />}>
+    <Section header="About" id="about" content={<AboutContent />} />
+    <Section header="Projects" id="projects" content={<ProjectsContent />}>
       <Projects />
     </Section>
-    <Section header="Tools" content={<ToolsContent />}>
+    <Section header="Tools" id="tools" content={<ToolsContent />}>
       <Tools />
     </Section>
-    <Section header="Contact" content={<ContactContent />}>
+    <Section header="Contact" id="contact" content={<ContactContent />}>
       <Contact />
     </Section>
   </div>
