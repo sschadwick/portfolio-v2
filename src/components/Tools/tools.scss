@@ -1,0 +1,32 @@
+@import '../variables.scss';
+
+.tools {
+  display: grid;
+  grid-template-areas:
+    'languages libraries'
+    'tools concepts';
+}
+
+.list {
+  padding: 0 2em;
+  h4 {
+    font-variant: small-caps;
+    font-weight: 900;
+  }
+}
+
+.languages__list {
+  grid-area: languages;
+}
+
+.libraries__list {
+  grid-area: libraries;
+}
+
+.concepts__list {
+  grid-area: concepts;
+}
+
+.tools__list {
+  grid-area: tools;
+}

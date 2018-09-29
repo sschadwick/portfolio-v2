@@ -5,7 +5,7 @@ import './header.scss'
 
 const Header = () => (
   <nav>
-    <ul>
+    <ul className="navbar__list">
       <li>
         <Link to="#" className="navbar__item">
           msd

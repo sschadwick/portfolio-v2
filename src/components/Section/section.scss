@@ -12,7 +12,6 @@
 .section__left {
   @include v-align;
   background: #fff;
-  border: 1px solid red;
   grid-area: left;
   padding: 0 4em;
   h2 {
@@ -20,12 +19,15 @@
     padding-bottom: 0.25em;
     width: fit-content;
   }
+  p {
+    color: grey;
+    line-height: 1.75em;
+  }
 }
 
 .section__right {
   @include c-align;
   @include v-align;
-  border: 1px solid blue;
   grid-area: right;
   padding: 0 4em;
 }

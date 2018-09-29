@@ -12,13 +12,16 @@ nav {
 }
 
 ul {
+  list-style: none;
+}
+
+.navbar__list {
   display: grid;
   font-size: 24px;
   font-variant: small-caps;
   grid-auto-flow: column;
   justify-content: space-around;
   letter-spacing: 0.1em;
-  list-style: none;
 }
 
 .feather {

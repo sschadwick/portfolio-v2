@@ -47,7 +47,7 @@ export default class Contact extends React.Component {
           method="post"
           onSubmit={this.handleSubmit}
         >
-          <label>Name</label>
+          <label>name</label>
           <input
             name="name"
             onChange={this.handleChange}
@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
             type="text"
             value={name}
           />
-          <label>Email</label>
+          <label>email</label>
           <input
             name="email"
             onChange={this.handleChange}
@@ -63,7 +63,7 @@ export default class Contact extends React.Component {
             type="email"
             value={email}
           />
-          <label>Text</label>
+          <label>text</label>
           <textarea
             name="message"
             onChange={this.handleChange}
