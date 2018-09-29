@@ -7561,11 +7561,11 @@ function createDefaultLogger() {
 
 
 exports.handler = function (event, context, callback) {
-  const nodemailer = __webpack_require__(29);
+  let nodemailer = __webpack_require__(29);
 
-  const smtpTransport = __webpack_require__(52);
+  let smtpTransport = __webpack_require__(52);
 
-  const transporter = nodemailer.createTransport(smtpTransport({
+  let transporter = nodemailer.createTransport(smtpTransport({
     host: 'smtp.stackmail.com',
     port: 587,
     secure: false,
@@ -7582,6 +7582,8 @@ exports.handler = function (event, context, callback) {
       console.log('Server is ready to take our messages');
     }
   });
+  console.log(event);
+  console.log(event.body);
   const requestBody = JSON.parse(event.body);
   const {
     name,

@@ -1,8 +1,8 @@
 exports.handler = function(event, context, callback) {
-  const nodemailer = require('nodemailer')
-  const smtpTransport = require('nodemailer-smtp-transport')
+  let nodemailer = require('nodemailer')
+  let smtpTransport = require('nodemailer-smtp-transport')
 
-  const transporter = nodemailer.createTransport(
+  let transporter = nodemailer.createTransport(
     smtpTransport({
       host: 'smtp.stackmail.com',
       port: 587,
@@ -21,6 +21,8 @@ exports.handler = function(event, context, callback) {
       console.log('Server is ready to take our messages')
     }
   })
+  console.log(event)
+  console.log(event.body)
   const requestBody = JSON.parse(event.body)
   const { name, email, message } = requestBody
 
