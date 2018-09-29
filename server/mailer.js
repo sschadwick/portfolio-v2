@@ -1,18 +1,15 @@
-var sesAccessKey = process.env.secretAddress
-var sesSecretKey = process.env.secretPassword
-
 exports.handler = function(event, context, callback) {
-  var nodemailer = require('nodemailer')
-  var smtpTransport = require('nodemailer-smtp-transport')
+  const nodemailer = require('nodemailer')
+  const smtpTransport = require('nodemailer-smtp-transport')
 
-  var transporter = nodemailer.createTransport(
+  const transporter = nodemailer.createTransport(
     smtpTransport({
       host: 'smtp.stackmail.com',
       port: 587,
       secure: false, // Activate TLS/STARTTLS
       auth: {
-        user: sesAccessKey,
-        pass: sesSecretKey,
+        user: process.env.secretAddress,
+        pass: process.env.secretPassword,
       },
     })
   )
@@ -24,24 +21,22 @@ exports.handler = function(event, context, callback) {
       console.log('Server is ready to take our messages')
     }
   })
-  // const requestBody = JSON.parse(event.body)
-  // const emailBody = requestBody.text;
-  var text = 'Email body goes here'
+  const requestBody = JSON.parse(event.body)
+  const emailBody = requestBody.text
 
-  var mailOptions = {
+  const mailOptions = {
     from: 'noreply@msweeneydev.com',
     to: 'mail@msweeneydev.com',
     subject: 'Test subject',
-    text: text,
+    text: emailBody,
   }
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
-      console.log('BIG ERROR!')
       const response = {
         statusCode: 500,
         body: JSON.stringify({
-          error: 'REALLY BIG ERROR!',
+          error: error.message,
         }),
       }
       callback(null, response)
@@ -49,7 +44,7 @@ exports.handler = function(event, context, callback) {
     const response = {
       statusCode: 200,
       body: JSON.stringify({
-        message: `Email processed succesfully!`,
+        message: `Email sent succesfully!`,
       }),
     }
     callback(null, response)
