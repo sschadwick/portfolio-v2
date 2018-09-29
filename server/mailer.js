@@ -22,13 +22,13 @@ exports.handler = function(event, context, callback) {
     }
   })
   const requestBody = JSON.parse(event.body)
-  const emailBody = requestBody.text
+  const { name, email, message } = requestBody
 
   const mailOptions = {
-    from: 'noreply@msweeneydev.com',
+    from: email,
     to: 'mail@msweeneydev.com',
-    subject: 'Test subject',
-    text: emailBody,
+    subject: `Message from ${name}`,
+    text: message,
   }
 
   transporter.sendMail(mailOptions, function(error, info) {
