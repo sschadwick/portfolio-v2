@@ -5,14 +5,11 @@ import axios from 'axios'
 import './contact.scss'
 
 export default class Contact extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      sent: false,
-    }
+  state = {
+    name: '',
+    email: '',
+    message: '',
+    sent: false,
   }
 
   handleChange = e => {
@@ -84,7 +81,7 @@ export default class Contact extends React.Component {
         <p>Thanks for getting in touch, I'll get back to you soon.</p>
         <p>
           Forgot something? Click{' '}
-          <Link to="#contact" className="form__link" onClick={this.handleReset}>
+          <Link to="#contact" className="link" onClick={this.handleReset}>
             here
           </Link>{' '}
           to send another message.
