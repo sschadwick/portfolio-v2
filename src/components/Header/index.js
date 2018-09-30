@@ -37,6 +37,7 @@ const Header = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="navbar__item"
+          title="github"
         >
           <Github />
         </a>
@@ -47,6 +48,7 @@ const Header = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="navbar__item"
+          title="twitter"
         >
           <Twitter />
         </a>
