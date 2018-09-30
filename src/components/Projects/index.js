@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { chevronRight, chevronLeft, github, monitor } from 'react-feather'
+import { ChevronRight, ChevronLeft, Github, Monitor } from 'react-feather'
 import './projects.scss'
 
 const projectContent = [
   {
     title: 'Vscene',
     text:
-      'My current work project that allows video collaboration, made with React, Redux, TypeScript, Python & Go, styled using CSS modules.',
+      'My current work project which is a video conferencing platform. Made with React, Redux, TypeScript, Python & Go, styled using CSS modules.',
     img: './img/vscene.jpg',
     github: 'https://ajenta.net/vscene/',
     live: 'https://ajenta.net/vscene/',
@@ -68,14 +68,6 @@ const projectContent = [
     live: 'http://glasgowcatcare.co.uk/',
   },
   {
-    title: 'Reaction Tester',
-    text:
-      'An easy way to settle debates about reaction speed, the fastest click wins.',
-    img: './img/reactiontester.jpg',
-    github: 'https://github.com/msweeneydev/reaction-tester',
-    live: 'https://msweeneydev.github.io/reaction-tester/',
-  },
-  {
     title: 'Grid Landing Page',
     text:
       'A tiled landing page design to showcase some of the benefits of using CSS grid.',
@@ -87,20 +79,22 @@ const projectContent = [
 
 class Projects extends Component {
   state = {
-    projectNumber: 1,
+    projectNumber: 0,
     project: projectContent[0],
   }
   handleNext = () => {
-    this.setState(prevState => ({
-      projectNumber: prevState.project + 1,
-      project: projectContent[prevState.projectNumber + 1],
-    }))
+    if (this.state.projectNumber < 8)
+      this.setState(prevState => ({
+        projectNumber: prevState.projectNumber + 1,
+        project: projectContent[this.state.projectNumber + 1],
+      }))
   }
   handlePrevious = () => {
-    this.setState(prevState => ({
-      projectNumber: prevState.project - 1,
-      project: projectContent[prevState.projectNumber - 1],
-    }))
+    if (this.state.projectNumber > 1)
+      this.setState(prevState => ({
+        projectNumber: prevState.projectNumber - 1,
+        project: projectContent[this.state.projectNumber - 1],
+      }))
   }
   render() {
     const { title, text, img, github, live } = this.state.project
@@ -110,6 +104,29 @@ class Projects extends Component {
         <div>
           <h3>{title}</h3>
           <p>{text}</p>
+        </div>
+        <div className="buttons">
+          <ChevronLeft className="navbar__item" onClick={this.handlePrevious} />
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__item"
+          >
+            <Github />
+          </a>
+          <span>
+            {this.state.projectNumber + 1}/{projectContent.length}
+          </span>
+          <a
+            href={live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__item"
+          >
+            <Monitor />
+          </a>
+          <ChevronRight className="navbar__item" onClick={this.handleNext} />
         </div>
       </div>
     )
