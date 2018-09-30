@@ -5,7 +5,7 @@ a {
 }
 
 nav {
-  background: #fff;
+  background: $background-main;
   padding: 1em;
   position: fixed;
   width: 100%;
@@ -36,6 +36,7 @@ ul {
 
 .navbar__item {
   color: $black;
+  font-weight: 700;
   padding-bottom: 0.25em;
   position: relative;
 }
