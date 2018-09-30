@@ -3,7 +3,7 @@ import './tools.scss'
 
 const Tools = () => (
   <div className="tools">
-    <div class="languages__list list">
+    <div className="languages__list list">
       <h4>languages</h4>
       <ul>
         <li>HTML5</li>
@@ -13,7 +13,7 @@ const Tools = () => (
         <li>Python / Java</li>
       </ul>
     </div>
-    <div class="libraries__list list">
+    <div className="libraries__list list">
       <h4>libraries</h4>
       <ul>
         <li>React / Redux</li>
@@ -23,7 +23,7 @@ const Tools = () => (
         <li>Semantic UI</li>
       </ul>
     </div>
-    <div class="concepts__list list">
+    <div className="concepts__list list">
       <h4>concepts</h4>
       <ul>
         <li>Responsive Design</li>
@@ -33,7 +33,7 @@ const Tools = () => (
         <li>Agile / Scrum</li>
       </ul>
     </div>
-    <div class="tools__list list">
+    <div className="tools__list list">
       <h4>tools</h4>
       <ul>
         <li>Git / GitHub</li>
