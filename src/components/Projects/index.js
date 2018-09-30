@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { chevronRight, chevronLeft, github, monitor } from 'react-feather'
 import './projects.scss'
 
 const projectContent = [
@@ -6,7 +7,7 @@ const projectContent = [
     title: 'Vscene',
     text:
       'My current work project that allows video collaboration, made with React, Redux, TypeScript, Python & Go, styled using CSS modules.',
-    img: './img/vscene.PNG',
+    img: './img/vscene.jpg',
     github: 'https://ajenta.net/vscene/',
     live: 'https://ajenta.net/vscene/',
   },
@@ -14,7 +15,7 @@ const projectContent = [
     title: 'The Gallery',
     text:
       'A React application that can be used by anyone wanting to host a gallery, made using React Router and React Transitions, styled with Glamorous.',
-    img: './img/gallery.PNG',
+    img: './img/gallery.jpg',
     github: 'https://github.com/msweeneydev/gallery',
     live: 'https://msweeneydev.com/gallery/',
   },
@@ -22,7 +23,7 @@ const projectContent = [
     title: 'Movie Finder',
     text:
       'A React application that finds information about your favourite film, made using the OMDB API.',
-    img: './img/movie.PNG',
+    img: './img/movie.jpg',
     github: 'https://github.com/msweeneydev/movie',
     live: 'https://msweeneydev.com/movie/',
   },
@@ -30,7 +31,7 @@ const projectContent = [
     title: 'Quoteth',
     text:
       'A React application that generates random quotes, made using Tadas Talakisis Quote API.',
-    img: './img/quoteth.PNG',
+    img: './img/quoteth.jpg',
     github: 'https://github.com/msweeneydev/quoteth',
     live: 'https://msweeneydev.com/quoteth/',
   },
@@ -38,7 +39,7 @@ const projectContent = [
     title: 'WeatherMe',
     text:
       'A React application that displays local weather, made using the HTML GeoLocation API and the OpenWeather API.',
-    img: './img/weather.PNG',
+    img: './img/weather.jpg',
     github: 'https://github.com/msweeneydev/weather',
     live: 'https://msweeneydev.com/weatherme/',
   },
@@ -46,7 +47,7 @@ const projectContent = [
     title: 'Countdown',
     text:
       'A JavaScript game based on the classic television show, made using the Wordnik API.',
-    img: './img/countdown.PNG',
+    img: './img/countdown.jpg',
     github: 'https://github.com/msweeneydev/countdown-game',
     live: 'https://msweeneydev.com/countdown-game/',
   },
@@ -54,7 +55,7 @@ const projectContent = [
     title: 'Pin & Bin',
     text:
       'An application that allows users to pin and bin notes, achieved by utilising local storage.',
-    img: './img/pinandbin.PNG',
+    img: './img/pinandbin.jpg',
     github: 'https://github.com/msweeneydev/pin-and-bin',
     live: 'https://msweeneydev.github.io/pin-and-bin/',
   },
@@ -62,7 +63,7 @@ const projectContent = [
     title: 'Glasgow Cat Care',
     text:
       'A simple site for my small business, made with Bootstrap 4 and a touch of JavaScript.',
-    img: './img/glasgowcatcare.PNG',
+    img: './img/glasgowcatcare.jpg',
     github: 'https://github.com/msweeneydev/glasgow-cat-care',
     live: 'http://glasgowcatcare.co.uk/',
   },
@@ -78,7 +79,7 @@ const projectContent = [
     title: 'Grid Landing Page',
     text:
       'A tiled landing page design to showcase some of the benefits of using CSS grid.',
-    img: './img/gridlandingpage.PNG',
+    img: './img/gridlandingpage.jpg',
     github: 'https://github.com/msweeneydev/grid-landing-page',
     live: 'https://msweeneydev.github.io/grid-landing-page/',
   },
@@ -104,8 +105,8 @@ class Projects extends Component {
   render() {
     const { title, text, img, github, live } = this.state.project
     return (
-      <div>
-        <img src={require(`./${img}`)} alt="" />
+      <div className="projects">
+        <img className="project__img" src={require(`${img}`)} alt={title} />
         <div>
           <h3>{title}</h3>
           <p>{text}</p>
