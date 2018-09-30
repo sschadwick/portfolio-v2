@@ -1,0 +1,16 @@
+@import '../variables.scss';
+
+.projects {
+  width: 100%;
+}
+
+.project__img {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  width: 100%;
+}
