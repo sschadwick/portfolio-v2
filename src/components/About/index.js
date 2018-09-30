@@ -5,7 +5,7 @@ const About = () => (
   <img
     className="profile__picture"
     src={require('./matthewbw.png')}
-    alt="a picture of matthew"
+    alt="matthew"
   />
 )
 
