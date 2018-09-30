@@ -24,7 +24,9 @@ const Layout = () => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
+    >
+      <html lang="en" />
+    </Helmet>
     <Header />
     <Landing />
     <Section header="About" id="about" content={<AboutContent />}>
