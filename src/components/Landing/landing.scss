@@ -2,6 +2,7 @@
 
 .landing {
   @include c-align;
+  background: $background-main;
   height: 100vh;
   width: 100%;
   .landing__container {

@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import About from '../components/About'
 import Contact from '../components/Contact'
 import Header from '../components/Header'
 import Landing from '../components/Landing'
@@ -26,7 +27,9 @@ const Layout = () => (
     />
     <Header />
     <Landing />
-    <Section header="About" id="about" content={<AboutContent />} />
+    <Section header="About" id="about" content={<AboutContent />}>
+      <About />
+    </Section>
     <Section header="Projects" id="projects" content={<ProjectsContent />}>
       <Projects />
     </Section>

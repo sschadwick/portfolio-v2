@@ -28,6 +28,11 @@
 .section__right {
   @include c-align;
   @include v-align;
+  background: $background-secondary;
   grid-area: right;
   padding: 0 4em;
+}
+
+.section__right:nth-child(n + 2):nth-child(odd) {
+  background: red;
 }
