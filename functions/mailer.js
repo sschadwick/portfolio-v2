@@ -7589,9 +7589,9 @@ exports.handler = function (event, context, callback) {
     message
   } = requestBody;
   const mailOptions = {
-    from: email,
+    from: 'mail@msweeneydev.com',
     to: 'mail@msweeneydev.com',
-    subject: `Message from ${name}`,
+    subject: `Message from ${name} - ${email}`,
     text: message
   };
   transporter.sendMail(mailOptions, function (error, info) {
