@@ -90,7 +90,7 @@ class Projects extends Component {
       }))
   }
   handlePrevious = () => {
-    if (this.state.projectNumber > 1)
+    if (this.state.projectNumber > 0)
       this.setState(prevState => ({
         projectNumber: prevState.projectNumber - 1,
         project: projectContent[this.state.projectNumber - 1],
