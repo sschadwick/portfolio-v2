@@ -17,7 +17,7 @@ const projectContent = [
       'A React application that can be used by anyone wanting to host a gallery, made using React Router and React Transitions, styled with Glamorous.',
     img: './img/gallery.jpg',
     github: 'https://github.com/msweeneydev/gallery',
-    live: 'https://msweeneydev.com/gallery/',
+    live: 'https://inspiring-ptolemy-acab2d.netlify.com/',
   },
   {
     title: 'Movie Finder',
@@ -25,7 +25,7 @@ const projectContent = [
       'A React application that finds information about your favourite film, made using the OMDB API.',
     img: './img/movie.jpg',
     github: 'https://github.com/msweeneydev/movie',
-    live: 'https://msweeneydev.com/movie/',
+    live: 'https://awesome-swanson-0e6c18.netlify.com',
   },
   {
     title: 'Quoteth',
@@ -33,7 +33,7 @@ const projectContent = [
       'A React application that generates random quotes, made using Tadas Talakisis Quote API.',
     img: './img/quoteth.jpg',
     github: 'https://github.com/msweeneydev/quoteth',
-    live: 'https://msweeneydev.com/quoteth/',
+    live: 'https://eloquent-lewin-ec0091.netlify.com/',
   },
   {
     title: 'WeatherMe',
@@ -41,7 +41,7 @@ const projectContent = [
       'A React application that displays local weather, made using the HTML GeoLocation API and the OpenWeather API.',
     img: './img/weather.jpg',
     github: 'https://github.com/msweeneydev/weather',
-    live: 'https://msweeneydev.com/weatherme/',
+    live: 'https://hardcore-mccarthy-a66452.netlify.com',
   },
   {
     title: 'Countdown',
@@ -49,7 +49,7 @@ const projectContent = [
       'A JavaScript game based on the classic television show, made using the Wordnik API.',
     img: './img/countdown.jpg',
     github: 'https://github.com/msweeneydev/countdown-game',
-    live: 'https://msweeneydev.com/countdown-game/',
+    live: 'https://trusting-einstein-740014.netlify.com/',
   },
   {
     title: 'Pin & Bin',
