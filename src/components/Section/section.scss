@@ -3,7 +3,9 @@
 .section {
   background: $background-main;
   display: grid;
-  grid-template-areas: 'left right';
+  grid-template-areas:
+    'left right'
+    'left right';
   grid-template-columns: 4fr 6fr;
   height: 100vh;
   width: 100%;
@@ -20,7 +22,6 @@
     width: fit-content;
   }
   p {
-    // color: grey;
     line-height: 1.75em;
   }
 }
@@ -35,4 +36,21 @@
 
 .section__right:nth-child(n + 2):nth-child(odd) {
   background: red;
+}
+
+@media (max-width: 920px) {
+  .section {
+    grid-template-areas:
+      'left left'
+      'right right';
+    height: max-content;
+  }
+  .section__left {
+    height: fit-content;
+    padding: 2em;
+  }
+  .section__right {
+    height: fit-content;
+    padding: 2em;
+  }
 }
