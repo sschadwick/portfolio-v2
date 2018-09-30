@@ -106,14 +106,20 @@ class Projects extends Component {
           <p>{text}</p>
         </div>
         <div className="buttons">
-          <ChevronLeft className="navbar__item" onClick={this.handlePrevious} />
+          <ChevronLeft
+            className="navbar__item"
+            onClick={this.handlePrevious}
+            title="go back"
+          />
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__item"
+            alt={title}
+            title={title}
           >
-            <Github />
+            <Github alt={title} title={title} />
           </a>
           <span>
             {this.state.projectNumber + 1}/{projectContent.length}
@@ -123,10 +129,16 @@ class Projects extends Component {
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__item"
+            alt={title}
+            title={title}
           >
-            <Monitor />
+            <Monitor alt={title} title={title} />
           </a>
-          <ChevronRight className="navbar__item" onClick={this.handleNext} />
+          <ChevronRight
+            className="navbar__item"
+            onClick={this.handleNext}
+            title="go forward"
+          />
         </div>
       </div>
     )
