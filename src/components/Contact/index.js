@@ -47,29 +47,35 @@ export default class Contact extends React.Component {
           method="post"
           onSubmit={this.handleSubmit}
         >
-          <label>name</label>
-          <input
-            name="name"
-            onChange={this.handleChange}
-            required
-            type="text"
-            value={name}
-          />
-          <label>email</label>
-          <input
-            name="email"
-            onChange={this.handleChange}
-            required
-            type="email"
-            value={email}
-          />
-          <label>text</label>
-          <textarea
-            name="message"
-            onChange={this.handleChange}
-            required
-            value={message}
-          />
+          <label>
+            name
+            <input
+              name="name"
+              onChange={this.handleChange}
+              required
+              type="text"
+              value={name}
+            />
+          </label>
+          <label>
+            email
+            <input
+              name="email"
+              onChange={this.handleChange}
+              required
+              type="email"
+              value={email}
+            />
+          </label>
+          <label>
+            text
+            <textarea
+              name="message"
+              onChange={this.handleChange}
+              required
+              value={message}
+            />
+          </label>
           <button className="submit" onClick={this.handleSubmit}>
             send message
           </button>
