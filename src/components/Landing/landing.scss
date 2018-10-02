@@ -15,3 +15,13 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .landing__container {
+    line-height: 3em;
+    width: 250px;
+    h3 {
+      text-align: right;
+    }
+  }
+}
