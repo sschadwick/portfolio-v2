@@ -30,3 +30,13 @@
 .tools__list {
   grid-area: tools;
 }
+
+@media (max-width: 480px) {
+  .tools {
+    grid-template-areas:
+      'languages'
+      'libraries'
+      'tools'
+      'concepts';
+  }
+}
