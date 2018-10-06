@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import config from '../../gatsby-config'
 
 import About from '../components/About'
 import Contact from '../components/Contact'
@@ -19,10 +20,15 @@ import './index.scss'
 const Layout = () => (
   <div>
     <Helmet
-      title="Matthew Sweeney - Front End Developer"
+      title={config.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'author', content: config.siteMetadata.author },
+        { name: 'description', content: config.siteMetadata.description },
+        {
+          name: 'keywords',
+          content:
+            'matthew, sweeney, portfolio, developer, front end, react, redux, javascript, html, css',
+        },
       ]}
     >
       <html lang="en" />
