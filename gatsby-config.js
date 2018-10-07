@@ -1,24 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: "Matthew Sweeney - Front End Developer",
-    author: "Matthew Sweeney",
-    description: "The portfolio of Matthew Sweeney"
+    title: 'Matthew Sweeney - Front End Developer',
+    author: 'Matthew Sweeney',
+    description: 'The portfolio of Matthew Sweeney',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Matthew Sweeney - Front End Developer',
+        short_name: 'MSD',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#fafafa;',
+        theme_color: '##dfdfdf',
         display: 'minimal-ui',
-        // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/favicon/favicon-96x96.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
   ],
 }
