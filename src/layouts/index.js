@@ -24,6 +24,22 @@ const Layout = () => (
       meta={[
         { name: 'author', content: config.siteMetadata.author },
         { name: 'description', content: config.siteMetadata.description },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@msweeneydev' },
+        { name: 'twitter:creator', content: '@msweeneydev' },
+        {
+          name: 'twitter:title',
+          content: 'Matthew Sweeney - Front End Developer',
+        },
+        {
+          name: 'twitter:description',
+          content: config.siteMetadata.description,
+        },
+        { name: 'twitter:image', content: '../components/About/matthewbw.png' },
+        {
+          name: 'twitter:image:alt',
+          content: 'The portfolio of Matthew Sweeney',
+        },
         {
           name: 'keywords',
           content:
