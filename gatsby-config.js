@@ -12,8 +12,8 @@ module.exports = {
         name: 'Matthew Sweeney - Front End Developer',
         short_name: 'MSD',
         start_url: '/',
-        background_color: '#fafafa;',
-        theme_color: '##dfdfdf',
+        background_color: '#fafafa',
+        theme_color: '#dfdfdf',
         display: 'minimal-ui',
         icon: 'src/favicon/favicon-96x96.png', // This path is relative to the root of the site.
       },
