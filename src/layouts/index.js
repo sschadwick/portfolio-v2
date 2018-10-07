@@ -24,12 +24,17 @@ const Layout = () => (
       meta={[
         { name: 'author', content: config.siteMetadata.author },
         { name: 'description', content: config.siteMetadata.description },
+        {
+          name: 'keywords',
+          content:
+            'matthew, sweeney, portfolio, developer, front end, react, redux, javascript, html, css',
+        },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@msweeneydev' },
         { name: 'twitter:creator', content: '@msweeneydev' },
         {
           name: 'twitter:title',
-          content: 'Matthew Sweeney - Front End Developer',
+          content: config.siteMetadata.title,
         },
         {
           name: 'twitter:description',
@@ -40,11 +45,14 @@ const Layout = () => (
           name: 'twitter:image:alt',
           content: 'The portfolio of Matthew Sweeney',
         },
+        { property: 'og:url', content: 'https://msweeneydev.com' },
+        { property: 'og:type', content: 'site' },
+        { property: 'og:title', content: config.siteMetadata.title },
         {
-          name: 'keywords',
-          content:
-            'matthew, sweeney, portfolio, developer, front end, react, redux, javascript, html, css',
+          property: 'og:description',
+          content: config.siteMetadata.description,
         },
+        { property: 'og:image', content: '../components/About/matthewbw.png' },
       ]}
     >
       <html lang="en" />
