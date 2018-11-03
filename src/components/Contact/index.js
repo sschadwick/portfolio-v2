@@ -42,6 +42,7 @@ export default class Contact extends React.Component {
     return !sent ? (
       <div className="contact">
         <form
+          action=""
           className="contact__form"
           name="contact"
           method="post"
@@ -76,9 +77,12 @@ export default class Contact extends React.Component {
               value={message}
             />
           </label>
-          <button className="submit" onClick={this.handleSubmit}>
-            send message
-          </button>
+          <input
+            className="submit"
+            onClick={this.handleSubmit}
+            type="submit"
+            value="send message"
+          />
         </form>
       </div>
     ) : (
